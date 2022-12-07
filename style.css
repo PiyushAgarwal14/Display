@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 12px;
+}
+
+/* .container{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+} */
+
+.crds {
+    display: contents;
+    justify-content: center !important;
+    list-style: none;
+  }
+
+a {
+    text-decoration: none;
+  }
+a:hover{
+    color: black;
+}
+
+.d-flex{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.offcanvas-body{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}

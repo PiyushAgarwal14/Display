@@ -1,3 +1,8 @@
+body{
+   background-color:#fffacd;
+}
+
+
 h1{
     text-align: center;
     color: white;
@@ -37,4 +42,9 @@ a:hover{
 .offcanvas-body{
     margin-bottom: 2rem;
     margin-top: 1rem;
+}
+
+.card{
+    background-color: greenyellow;
+    
 }

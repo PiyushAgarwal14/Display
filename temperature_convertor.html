@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <title>Fahrenheit to Celcius </title>
 <body>
 
@@ -10,6 +10,45 @@
 <p>Celcius: <span id="outputCelcius"></span></p>
 
 <button onclick="calc(this.value)">Convert</button>
+<script>
+function calc(valNum) {
+  valNum = document.getElementById("inputFahrenheit").value;
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+</script>
+
+</body>
+</html> 
+ -->
+<html>
+<head>
+  <title>Fahrenheit to Celcius </title>
+</head>
+
+<style>
+  .container{
+    margin:55px;
+  }  
+  .button{
+    padding:5px 55px 5px 55px;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    border: blue;
+  }
+  
+</style>
+<body>
+
+<div class="container">
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit">
+</p>
+<p> Result: <span id="outputCelcius"></span>  &#8451</p>
+
+<button class="button"onclick="calc(this.value)">Convert</button>
+</div>
 <script>
 function calc(valNum) {
   valNum = document.getElementById("inputFahrenheit").value;

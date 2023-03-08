@@ -1,0 +1,21 @@
+<html>
+<title>Fahrenheit to Celcius </title>
+<body>
+
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+<button onclick="calc(this.value)">Convert</button>
+<script>
+function calc(valNum) {
+  valNum = document.getElementById("inputFahrenheit").value;
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+</script>
+
+</body>
+</html> 

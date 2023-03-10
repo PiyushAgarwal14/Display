@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inch to foot</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <p>
+              <label>Inch</label>
+              <input id="inputInch" type="number" placeholder="Inch" required>
+            </p>
+       
+            <p> Result: <span id="outputFoot"></span>  Foot</p>
+
+             <button class="button"onclick="calc(this.value)">Convert</button>
+        </div>
+    </div>
+
+<script>
+    function calc(valNum) {
+      valNum = document.getElementById("inputInch").value;
+      document.getElementById("outputFoot").innerHTML=(valNum)/12;
+    }
+</script>
+
+</body>
+</html>

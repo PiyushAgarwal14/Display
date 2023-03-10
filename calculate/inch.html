@@ -5,27 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inch to foot</title>
+
+    <script>
+        function calc(valNum) {
+          valNum = document.getElementById("inputInch").value;
+          document.getElementById("outputFoot").innerHTML=(valNum)/12;
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-image: url("https://images.pexels.com/photos/131661/pexels-photo-131661.jpeg?auto=compress&cs=tinysrgb&w=600");
+            background-repeat: no-repeat;
+            background-size: 100% 150%;
+        }
+
+
+        #inputInch{
+            width: 220px;
+            height: 5px;
+            border-radius: 5px;
+            border: 1px solid grey;
+            padding: 15px;
+        }
+
+
+         @media only screen and (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+
+            #inputInch {
+                width: 70%;
+            }
+
+            .main {
+                width: 75%;
+            }
+
+            .button {
+                width: 70%;
+            }
+
+        }
+    </style>
+    
 </head>
 <body>
+
     <div class="container">
         <div class="main">
-            <p>
-              <label>Inch</label>
-              <input id="inputInch" type="number" placeholder="Inch" required>
-            </p>
+                    
+            <p> <label>Inch</label>
+              <input id="inputInch" type="number" placeholder="Inch" required> </p>
+            
        
-            <p> Result: <span id="outputFoot"></span>  Foot</p>
+             <p> Result: <span id="outputFoot"></span>  Foot </p>
 
              <button class="button"onclick="calc(this.value)">Convert</button>
+            
         </div>
     </div>
 
-<script>
-    function calc(valNum) {
-      valNum = document.getElementById("inputInch").value;
-      document.getElementById("outputFoot").innerHTML=(valNum)/12;
-    }
-</script>
 
 </body>
 </html>

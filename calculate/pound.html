@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pound to Kg</title>
 
-    <script>
-        function calc(valNum) {
-          valNum = document.getElementById("inputPound").value;
-          document.getElementById("outputPound").innerHTML=(valNum)/2.205;
-        }
-    </script>
+        <script>
+            function calc(valNum) {
+                valNum = document.getElementById("inputPound").value;
+                document.getElementById("outputPound").innerHTML=(valNum)/2.205;
+            }
+        </script>
+
 
     <link rel="stylesheet" href="style.css">
 
@@ -61,7 +62,7 @@
               <input id="inputPound" type="number" placeholder="Pound" required> </p>
             
        
-             <p> Result: <span id="outputPound"></span>  Pound </p>
+             <p> Result: <span id="outputPound"></span>  Kg </p>
 
              <button class="button"onclick="calc(this.value)">Convert</button>
             

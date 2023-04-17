@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  
+    <style>
+        body{
+            background-image: url("night.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 200%;
+        }
+        .container{
+            margin: auto auto;
+            max-width: 300px;
+            margin-top: 10rem;
+            background-color: black;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: white;
+            border-radius: 5px;
+            opacity: 0.9;
+        }
+
+        .btn{
+            width: 260px;
+            background-color: blueviolet;
+            margin-top: 15px;
+        }
+
+        .d1{
+            text-align: center;
+        }
+        #p1{
+            /* position: fixed; */
+            text-align: center;
+            /* margin-top: 10rem; */
+            /* font-size: 55px; */
+            font-weight: 200;
+            font-family:'Times New Roman', Times, serif;
+            color: white;
+        }
+        
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+              <button class="btn">Submit</button>
+            </div>
+        </div>
+
+    </div>
+
+    <section>
+        <div id="p1"></div>
+    </section>    
+    
+    <script>
+        var i=0;
+        var txt ="Design By:- Piyush Agarwal";
+        var abc = txt.split("");
+        var xyz;
+        function fn()
+        {
+            if(i<abc.length)
+            document.getElementById('p1').innerHTML+=abc.shift();
+            else {
+                clearTimeout(xyz);
+                return false;
+            }       
+            xyz = setTimeout('fn()', 300);
+        }
+        fn();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>

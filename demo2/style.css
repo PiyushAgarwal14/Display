@@ -1,0 +1,95 @@
+.offcanvas-body{
+    background-color: #242424;
+    color: white;
+    /* max-width: fit-content; */
+    /* padding-right: 50px; */
+    /* padding-bottom: 200px; */
+    /* padding-top: 20px; */
+}
+
+.offcanvas-header{
+    background-color: teal;
+}
+
+.navbars {
+    background-color: teal;
+}
+
+.cards {
+    width: 300px;
+    text-align: justify;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto!important; 
+    box-shadow: -5px 10px rgb(75, 71, 71);
+}
+
+.card-img1{
+    width: 300px;
+    height: 200px;
+    padding: 0px 2px 2px 0px;
+    border-radius: 6px;
+}
+
+.card-img1:hover {
+    transform: scale(1.1);
+}
+
+.card-txt{
+    padding: 2px 2px 2px 2px;
+}
+
+.navbars-link {
+    color: white;
+    text-decoration: none;
+}
+
+.navbars-link:hover{
+    color: yellow;
+}
+
+.rows1{
+    margin-top: 1rem;
+    columns: 100px 3;
+}
+
+.carousal-image{
+    width: 100%;
+    height: 600px;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    padding: 20px 20px;
+}
+
+.footer-text{
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    /* body {
+      background-color: lightblue;
+    } */
+    .carousel-caption {
+        font-size: 10px;
+    }
+
+    .cards{
+      margin-top: 10px;
+      margin-bottom: 20px;
+      
+    }
+
+    .rows1{
+        /* display: flex; */
+        margin-top: 1rem;
+        columns: 1;
+    }
+
+    .carousal-image{
+        height: 400px;
+    }
+  }

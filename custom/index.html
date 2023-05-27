@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Search Bar Demo</title>
+    <style>
+        body{
+            margin: auto;
+            padding: 0;
+        }
+        .navbar {
+            text-align: center;
+            padding: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      a{
+        text-decoration: none;
+        color: black;
+      }
+
+      li{
+        display: inline;
+        list-style-type: none;
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+
+      form {
+        margin: 200px 37%; 
+        width: 400px;
+        height: 44px;
+        border-radius: 5px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      input {
+        all: unset;
+        font: 16px system-ui;
+        color: black;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+      }
+
+      ::placeholder {
+        color: black;
+        opacity: 0.7; 
+      }
+
+      svg {
+        color: grey;
+        fill: currentColor;
+        width: 24px;
+        height: 24px;
+        padding: 10px;
+      }
+
+      button {
+        all: unset;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+      }
+
+      .footer{
+        
+        font-size: 18px;
+        position: fixed;
+            padding: 10px 10px 0px 10px;
+            bottom: 0;
+            width: 100%;
+            /* Height of the footer*/
+            height: 50px;
+            box-shadow: 0 4px 0 8px rgba(0, 0, 0, 0.2);
+      }
+     
+      .insta:hover{
+        color: palevioletred;
+      }
+
+      .link:hover{
+        color: #0077B5;
+      }
+
+      .what:hover{
+        color: greenyellow;
+      }
+
+      .git:hover{
+        color: navy;
+      }
+
+      .cg:hover{
+        color: purple;
+      }
+
+      .gfg:hover{
+        color: green;
+      }
+
+      .leet:hover{
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="navbar">
+        <ul>
+            <a href="https://mail.google.com/mail/u/1/#inbox" target="_blank">
+                <li> <img src="gmail.webp" width="17px" alt="gmail"> Gmail</li>
+            </a>
+            
+            <a href="https://unsplash.com/@piyush_agarwal" target="_blank">
+                <li> <img src="unsplash.svg" width="15px" alt="Unsplash"> Unsplash</li>
+            </a>
+            
+            <a href="http://piyushagarwal.freecluster.eu/?i=1" target="_blank">
+                <li> <img src="" alt=""> MySite</li>
+            </a>    
+
+            <a href="https://www.youtube.com/" target="_blank">
+                <li>YouTube</li>
+            </a>
+            <a href="https://classroom.google.com/u/1/h" target="_blank">
+                <li>Classroom</li>
+            </a>
+
+            <a href="https://drive.google.com/drive/u/0/my-drive" target="_blank">
+                <li>Drive</li>
+            </a>
+
+        </ul>
+    </div>
+
+    <div class="container">
+    <form role="search" id="form">
+        <img src="logo.webp" alt="google" width="20px" style="padding-left: 8px;">
+      <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content" autofocus>
+      <button>
+        <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+      </button>
+    </form>
+    <script>
+      const f = document.getElementById('form');
+      const q = document.getElementById('query');
+      const google = 'https://www.google.com/search?q=site%3A+';
+    
+
+      function submitted(event) {
+        event.preventDefault();
+        const url = google +  '+' + q.value;
+        const win = window.open(url, '_blank');
+        win.focus();
+      }
+
+      f.addEventListener('submit', submitted);
+    </script>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <a href="https://www.instagram.com/piyushagarwal34/" target="_blank">
+            <li class="insta">Instagram</li>
+
+            <a href="https://www.linkedin.com/in/piyush-agarwal-85b0301ba/?original_referer=https%3A%2F%2Fgithub.com%2F" target="_blank">
+            <li class="link">LinkedIn</li>
+
+            <a href="https://web.whatsapp.com/" target="_blank">
+            <li class="what">Whatsapp</li>
+
+            <a href="https://github.com/PiyushAgarwal14" target="_blank">
+            <li class="git">GitHub</li>
+
+            <a href="https://openai.com/blog/chatgpt" target="_blank">
+            <li class="cg">ChatGpt</li>
+
+            <a href="" target="_blank">
+            <li class="gfg">GFG</li>
+
+            <a href="https://leetcode.com/" target="_blank">
+            <li class="leet">LeetCode</li>
+        </ul>
+    </div>
+    
+  </body>
+</html>

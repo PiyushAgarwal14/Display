@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+    <title>Used Car Price Valuation Tool </title>
+    <meta charset="UTF-8">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        /* h1 {
+            text-align: center;
+        } */
+
+        .Container{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: auto;
+            margin-right: auto;
+            text-align:justify;
+        }
+
+        .card{
+            width: 30%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            /* margin-left: 5px; */
+            float:left;
+            margin-left: 5rem;
+            /* margin-right: 5rem; */
+            border-radius: 8px;
+            margin-top: 5rem;
+        }
+
+        .col{
+            text-align: justify;
+            width: 30%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            /* margin-left: 5px; */
+            float:left;
+            margin-left: 5rem;
+            /* margin-right: 5rem; */
+            border-radius: 8px;
+            margin-top: 5rem;
+        }
+
+        .coll{
+            text-align: justify;
+            width: 40%;
+            /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+            padding: 25px;
+            /* margin-left: 5px; */
+            float:left;
+            margin-left: 5rem;
+            /* margin-right: 5rem; */
+            border-radius: 8px;
+            margin-top: 5rem;
+        }
+        h1 {
+            text-align: center;
+        }
+/* 
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        } */
+
+        /* div {
+            text-align: justify;
+        } */
+
+        input{
+            width: 100%;
+            height: 4vh;
+            border-radius: 5px;
+        }
+
+        label{
+            font-weight: 600;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+        -moz-appearance: textfield;
+        }
+        
+        .result{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div style="margin-top:100px;">
+
+    </div>
+    <div class="login">
+
+        <h1 style="margin-top: -5rem;">Used Car Price Valuation Tool </h1>
+            <!-- <div class="bg" style="text-align: center; margin-top: -3rem;">
+                <img src="image/cars.png" alt="bg" style="align-items: center;">
+            </div> -->
+            
+       
+
+        <!-- Main Input For Receiving Query to our ML -->
+
+
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <form action="{{ url_for('predict')}}" method="get">
+
+                    <div class="ai">
+                        <label for="floatingInput">Enter Car Name</label> <br>
+
+                        <select name="carname" id="carname" style="width: 100%; height: 4vh; border: solid 2px black; border-radius: 5px;">
+                            <option value="Maruti Suzuki Alto">Maruti Suzuki Alto</option>
+                            <option value="Hyundai Grand i10">Hyundai Grand i10</option>
+                            <option value="Ford Figo">Ford Figo</option>
+                            <option value="Mahindra Scorpio S10">Mahindra Scorpio S10</option>
+                            <option value="Maruti Suzuki Swift">Maruti Suzuki Swift</option>
+                            <option value="Maruti Suzuki Wagon">Maruti Suzuki Wagon</option>
+                            <option value="Honda City 1.5">Honda City 1.5</option>
+                            <option value="Renault Duster 85">Renault Duster 85</option>
+                            <option value="Honda Amaze">Honda Amaze</option>
+                            <option value="Audi Q7">Audi Q7</option>
+                            <option value="Tata Indica V2">Tata Indica V2</option>
+                            <option value="Skoda Laura">Skoda Laura</option>
+                          </select>
+                        <!-- <input type="text" class="form-control" id="carname" name="carname" placeholder="Car Name"
+                            required="required" /> -->
+                    </div>
+                    <br>
+
+                    <div class="ai">
+                        <label for="floatingInput">Enter Car Company</label> <br>
+                        <select name="company" id="company" style="width: 100%; height: 4vh; border: solid 2px black; border-radius: 5px;">
+                            <option value="Maruti">Maruti</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Ford">Ford Figo</option>
+                            <option value="Mahindra">Mahindra</option>
+                            <option value="Audi">Audi</option>
+                            <option value="Tata">Tata</option>
+                            <option value="Skoda">Skoda</option>
+                            <option value="Renault">Renault</option>
+                            <option value="Honda">Honda</option>
+                          </select>
+                        <!-- <input type="text" class="form-control" id="company" name="company" placeholder="Car Company"
+                            required="required" /> -->
+                    </div>
+                    <br>
+
+                    <div class="ai">
+                        <label for="floatingInput">Enter Car Purchase Year</label> <br>
+                        <input type="number" class="form-control" id="year" name="year" placeholder="Purchase Year"
+                            required="required" />
+                    </div>
+                    <br>
+
+                    <div class="ai">
+                        <label for="floatingInput">Enter Kms Driven in Years</label> <br>
+                        <input type="number" class="form-control" id="kms" name="kms" placeholder="Kms Driven"
+                            required="required" />
+                    </div>
+                    <br>
+
+                    <div class="ai" style="text-align: center;">
+                        <label for="floatingInput" style="float: left;">Enter Car Fuel Type</label> <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="fuel" id="fuel" value="Petrol">
+                            <label class="form-check-label" for="inlineRadio1">Petrol</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="fuel" id="fuel" value="Diesel">
+                            <label class="form-check-label" for="inlineRadio2">Diesel</label>
+                          </div>
+
+                        <!-- <input type="text" class="form-control" id="fuel" name="fuel" placeholder="Car Fuel Type"
+                            required="required" /> -->
+                    </div>
+                    <br>
+
+                    <br>
+
+                    <div class="result">
+                        {{ prediction_text }}
+                    </div>
+
+                    <br> <br>
+                    <button type="submit" class="btn btn-primary btn-block btn-large" style="width:100%; background-color: #ec6602; color: white; 
+                    font-weight: 800; border-color: #ec6602; height: 5vh;" >
+                        Check Price</button>
+                    <br>
+
+                </form>
+
+              </div>
+              <div class="coll" style="padding-top: 6rem;">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://imgd.aeplcdn.com/370x208/n/cw/ec/54399/exterior-right-front-three-quarter-10.jpeg?q=75" class="d-block w-100" alt="..." style=" transform: scaleX(-1);">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://imgd.aeplcdn.com/370x208/n/cw/ec/41645/tata-nexon-right-front-three-quarter3.jpeg?q=75" class="d-block w-100" alt="..." style=" transform: scaleX(-1);">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://imgd.aeplcdn.com/370x208/n/cw/ec/141115/creta-exterior-right-front-three-quarter.jpeg?isig=0&q=75" class="d-block w-100" alt="..." style=" transform: scaleX(-1);">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev"
+                    style="background-color: transparent; border: none;">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next" style="background-color: transparent; border: none;">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+              </div>
+            </div>
+
+<!-- 
+        <div class="Container">
+
+            <div class="card">
+                
+            </div>
+        </div> -->
+        <br>
+        <br>
+        
+    </div>
+
+    <!-- <div class="" style="background-color:orange;">
+        <div class="clearfix"> -->
+
+            <!-- <div class="col-md-12">
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Experiment Performed on Day 2 of FDP </p></center>
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Developed by Deepak Moud </p></center>  
+</div> -->
+        </div>
+    </div>
+</body>
+
+</html>

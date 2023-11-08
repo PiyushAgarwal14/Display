@@ -1,0 +1,58 @@
+/* Base styles for card container and card elements */
+
+
+#cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card a {
+    display: block;
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.card a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles for mobile view */
+
+@media (max-width: 768px) {
+    #cardContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Full width on mobile screens */
+    }
+}
+
+/* Style for the search input */
+
+#searchInput {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+}

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const webAppUrl = 'https://script.google.com/macros/s/AKfycbwI1NSdEscXQCVmAVV3RxQxVVIwXxbUYJHo7e52p0US8t7ueFYXoJZOvMSFsrFPAbzI3A/exec'; // Replace with your web app URL.
+    const webAppUrl = 'My_Web_App_Url'; // Replace with your web app URL.
 
     let originalCards; // Store a copy of the original cards.
 
